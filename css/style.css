@@ -5,5 +5,3 @@
     -ms-filter: grayscale(100%);
     -o-filter:grayscale(100%);
 }
-
-*::-webkit-scrollbar-thumb: black;
