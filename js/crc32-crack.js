@@ -134,4 +134,4 @@ var _crc32_cracker=null;
 function crack_uidhash(uidhash) {
     _crc32_cracker=_crc32_cracker||make_crc32_cracker();
     return _crc32_cracker.crack(parseInt(uidhash,16));
-}<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+}
