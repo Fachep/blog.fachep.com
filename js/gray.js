@@ -5,7 +5,8 @@ switch(dateString) {
 		document.documentElement.classList.add('gray');
 		document.styleSheets[0].addRule('*::-webkit-scrollbar-thumb','background: black');
 		var e = document.createElement('link');
-		e.rel='icon';
+		e.rel='shortcut icon';
+		e.type='images/x-icon';
 		e.href='/favicon.gray.ico';
 		document.head.appendChild(e);
 }
