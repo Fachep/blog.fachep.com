@@ -1,0 +1,8 @@
+.gray {
+	filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter:grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter:grayscale(100%);
+}
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
