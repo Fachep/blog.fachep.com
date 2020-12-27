@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.fachep.com/about/index.html</loc>
+    
+    <lastmod>2020-12-27T11:28:44.901Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.fachep.com/2020/03/23/bilibili-bvid/</loc>
     
     <lastmod>2020-12-27T10:57:05.712Z</lastmod>
@@ -47,13 +54,6 @@
     <loc>https://blog.fachep.com/tags/index.html</loc>
     
     <lastmod>2020-07-30T09:45:58.835Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.fachep.com/about/index.html</loc>
-    
-    <lastmod>2020-07-30T08:46:12.654Z</lastmod>
     
   </url>
   
