@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.fachep.com/"/>
-  <updated>2020-12-28T16:34:31.210Z</updated>
+  <updated>2020-12-28T19:33:04.055Z</updated>
   <id>https://blog.fachep.com/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Notepad++开启字体连字特性</title>
+    <link href="https://blog.fachep.com/2020/12/29/npp-ligatures-tech/"/>
+    <id>https://blog.fachep.com/2020/12/29/npp-ligatures-tech/</id>
+    <published>2020-12-28T18:37:02.000Z</published>
+    <updated>2020-12-28T19:33:04.055Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li><p>在<strong>插件&gt;插件管理</strong>中安装LuaScript插件</p></li><li><p>点<strong>插件&gt;LuaScript&gt;Edit Startup Script</strong></p></li><li><p>输入下面代码</p><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">editor1.Technology = SC_TECHNOLOGY_DIRECTWRITE</span><br><span class="line">editor2.Technology = SC_TECHNOLOGY_DIRECTWRITE</span><br></pre></td></tr></table></figure></li><li><p>保存，重启</p></li></ol><p>JetBrains Mono：</p><p><img src= "/img/loading.gif" data-src="/img/1936838AAB86F4D4B1A791142D592B8B.webp" alt="开启前"></p><p>开启前</p><p><img src= "/img/loading.gif" data-src="/img/41D768FDC3BA6E4970BA573A13743E90.webp" alt="开启后"></p><p>开启后</p><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;在&lt;strong&gt;插件&amp;gt;插件管理&lt;/strong&gt;中安装LuaScript插件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;点&lt;strong&gt;插件&amp;gt;LuaScript&amp;gt;Edit Startup Script&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="笔记" scheme="https://blog.fachep.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="Notepad++" scheme="https://blog.fachep.com/tags/Notepad/"/>
+    
+      <category term="字体" scheme="https://blog.fachep.com/tags/%E5%AD%97%E4%BD%93/"/>
+    
+  </entry>
   
   <entry>
     <title>hmmmm</title>
