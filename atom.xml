@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.fachep.com/"/>
-  <updated>2020-12-28T19:33:04.055Z</updated>
+  <updated>2020-12-28T19:35:01.550Z</updated>
   <id>https://blog.fachep.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://blog.fachep.com/2020/12/29/npp-ligatures-tech/"/>
     <id>https://blog.fachep.com/2020/12/29/npp-ligatures-tech/</id>
     <published>2020-12-28T18:37:02.000Z</published>
-    <updated>2020-12-28T19:33:04.055Z</updated>
+    <updated>2020-12-28T19:35:01.550Z</updated>
     
-    <content type="html"><![CDATA[<ol><li><p>在<strong>插件&gt;插件管理</strong>中安装LuaScript插件</p></li><li><p>点<strong>插件&gt;LuaScript&gt;Edit Startup Script</strong></p></li><li><p>输入下面代码</p><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">editor1.Technology = SC_TECHNOLOGY_DIRECTWRITE</span><br><span class="line">editor2.Technology = SC_TECHNOLOGY_DIRECTWRITE</span><br></pre></td></tr></table></figure></li><li><p>保存，重启</p></li></ol><p>JetBrains Mono：</p><p><img src= "/img/loading.gif" data-src="/img/1936838AAB86F4D4B1A791142D592B8B.webp" alt="开启前"></p><p>开启前</p><p><img src= "/img/loading.gif" data-src="/img/41D768FDC3BA6E4970BA573A13743E90.webp" alt="开启后"></p><p>开启后</p><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    <content type="html"><![CDATA[<ol><li><p>在<strong>插件&gt;插件管理</strong>中安装LuaScript插件</p></li><li><p>点<strong>插件&gt;LuaScript&gt;Edit Startup Script</strong></p></li><li><p>输入下面代码</p><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">editor1.Technology = SC_TECHNOLOGY_DIRECTWRITE</span><br><span class="line">editor2.Technology = SC_TECHNOLOGY_DIRECTWRITE</span><br></pre></td></tr></table></figure></li><li><p>保存，重启</p></li></ol><p>JetBrains Mono：</p><p>开启前</p><p><img src= "/img/loading.gif" data-src="/img/1936838AAB86F4D4B1A791142D592B8B.webp" alt="开启前"></p><p>开启后</p><p><img src= "/img/loading.gif" data-src="/img/41D768FDC3BA6E4970BA573A13743E90.webp" alt="开启后"></p><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
     
     <summary type="html">
     
