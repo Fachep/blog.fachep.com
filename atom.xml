@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.fachep.com/"/>
-  <updated>2020-12-29T11:37:33.278Z</updated>
+  <updated>2020-12-29T15:39:08.652Z</updated>
   <id>https://blog.fachep.com/</id>
   
   <author>
@@ -21,20 +21,21 @@
     <link href="https://blog.fachep.com/2020/12/29/npp-ligatures-tech/"/>
     <id>https://blog.fachep.com/2020/12/29/npp-ligatures-tech/</id>
     <published>2020-12-28T18:37:02.000Z</published>
-    <updated>2020-12-29T11:37:33.278Z</updated>
+    <updated>2020-12-29T15:39:08.652Z</updated>
     
-    <content type="html"><![CDATA[<ol><li><p>在<strong>插件&gt;插件管理</strong>中安装LuaScript插件</p></li><li><p>点<strong>插件&gt;LuaScript&gt;Edit Startup Script</strong></p></li><li><p>输入下面代码</p><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">editor1.Technology = SC_TECHNOLOGY_DIRECTWRITE</span><br><span class="line">editor2.Technology = SC_TECHNOLOGY_DIRECTWRITE</span><br></pre></td></tr></table></figure></li><li><p>保存，重启</p></li></ol><p>JetBrains Mono：</p><p>开启前</p><p><img src= "/img/loading.gif" data-src="/img/1936838AAB86F4D4B1A791142D592B8B.webp" alt="开启前"></p><p>开启后</p><p><img src= "/img/loading.gif" data-src="/img/41D768FDC3BA6E4970BA573A13743E90.webp" alt="开启后"></p><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    <content type="html"><![CDATA[<styple>@font-face {    font-family: 'JetBrains Mono';    src: url('/source/JetBrainsMono-Regular.woff2');}pre {    font-family: 'JetBrains Mono';}</style><p>编码/等宽字体诸如<code>JetBrains Mono</code>支持连字字体，可以将某些特定的相邻合并绘制，</p><p>从而提高可读性和美观度，编辑器<code>Notepad++</code>原生没有此特性的开启设置，</p><p>本文提供**在<code>Notepad++</code>中开启字体连字的方法。</p><ol><li><p>在<strong>插件&gt;插件管理</strong>中安装LuaScript插件</p></li><li><p>点<strong>插件&gt;LuaScript&gt;Edit Startup Script</strong></p></li><li><p>输入下面代码</p><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">editor.Technology = SC_TECHNOLOGY_DIRECTWRITE</span><br></pre></td></tr></table></figure></li><li><p>保存，重启</p></li></ol><p><code>JetBrains Mono</code>：</p><p>开启前</p><p><img src= "/img/loading.gif" data-src="/img/1936838AAB86F4D4B1A791142D592B8B.webp" alt="开启前"></p><p>开启后</p><p><img src= "/img/loading.gif" data-src="/img/41D768FDC3BA6E4970BA573A13743E90.webp" alt="开启后"></p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-- --- == === != !== =!= =:= =/= &lt;= &gt;= &amp;&amp; &amp;&amp;&amp; &amp;= ++ +++ *** ;; !! ?? ?: ?. ?= &lt;: :&lt; :&gt; &gt;: &lt;&gt; &lt;&lt;&lt; &gt;&gt;&gt; &lt;&lt; &gt;&gt; || -| _|_ |- ||- |= ||= ## ### #### #&#123; #[ ]# #( #? #_ #_( #: #! #= ^= &lt;$&gt; &lt;$ $&gt; &lt;+&gt; &lt;+ +&gt; &lt;*&gt; &lt;* *&gt; &lt;/ &lt;/&gt; /&gt; &lt;!-- &lt;#-- --&gt; -&gt; -&gt;&gt; &lt;&lt;- &lt;- &lt;=&lt; =&lt;&lt; &lt;&lt;= &lt;== &lt;=&gt; &lt;==&gt; ==&gt; =&gt; =&gt;&gt; &gt;=&gt; &gt;&gt;= &gt;&gt;- &gt;- &gt;-- -&lt; -&lt;&lt; &gt;-&gt; &lt;-&lt; &lt;-| &lt;=| |=&gt; |-&gt; &lt;-&gt; &lt;~~ &lt;~ &lt;~&gt; ~~ ~~&gt; ~&gt; ~- -~ ~@ [||] |] [| |&#125; &#123;| [&lt; &gt;] |&gt; &lt;| ||&gt; &lt;|| |||&gt; &lt;||| &lt;|&gt; ... .. .= .- ..&lt; .? :: ::: := ::= :? :?&gt; // /// /* */ /= //= /== @_ __</span><br></pre></td></tr></table></figure><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;在&lt;strong&gt;插件&amp;gt;插件管理&lt;/strong&gt;中安装LuaScript插件&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;点&lt;strong&gt;插件&amp;gt;LuaScript&amp;gt;Edit Startup Script&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;
+        &lt;styple&gt;
+@font-face {
+    font-family: &#39;JetBrains Mono&#39;;
+    src: url(&#39;/source/JetBrainsMono-Regular.woff2&#39;);
+}
+pre {
+    font-family: &#39;JetB
       
     
     </summary>
