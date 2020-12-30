@@ -14,7 +14,7 @@
 	background-color: rgb(27 31 35 / 5%);
 }
 
-#article-container a {
+#article-container a:not(.fancybox) {
 	color: #ff7242;
 	text-decoration: none;
 	outline: 0;
@@ -22,7 +22,7 @@
 	position: relative;
 }
 
-#article-container a:after {
+#article-container a:not(.fancybox):after {
 	content: '';
 	position: absolute;
 	width: 100%;
@@ -35,13 +35,13 @@
 	transition: transform .25s ease-out;
 }
 
-#article-container a:hover {
+#article-container a:not(.fancybox):hover {
 	text-decoration: none;
 	outline: 0;
 	color: #49b1f5;
 }
 
-#article-container a:hover:after {
+#article-container a:not(.fancybox):hover:after {
 	transform: scaleX(1);
 	transform-origin: bottom left;
 }
