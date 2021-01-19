@@ -1,6 +1,6 @@
 $('.cmd-title span').text(window.location.host+' bash');
 $('.address').text('[root@'+window.location.host+' ~] ');
-$('#ip').text(returnCitySN.cip);
+function setip(ip){$('#ip').text(ip);}
 
 function f(){
 if(window.innerWidth<=767) {
