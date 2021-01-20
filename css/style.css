@@ -57,3 +57,8 @@
 	transition: color .13s linear;
     color: white;
 }
+
+#footer-wrap a:hover {
+    color: mediumpurple;
+    text-decoration: none;
+}
