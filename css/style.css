@@ -14,7 +14,7 @@
 	background-color: rgb(27 31 35 / 5%);
 }
 
-#article-container a:not(.fancybox), .cmd-text a {
+#article-container a:not(.fancybox):not(.site-page) {
 	color: #ff7242;
 	text-decoration: none;
 	outline: 0;
@@ -22,7 +22,7 @@
 	position: relative;
 }
 
-#article-container a:not(.fancybox):after, .cmd-text a:after {
+#article-container a:not(.fancybox):not(.site-page):after {
 	content: '';
 	position: absolute;
 	width: 100%;
@@ -35,13 +35,13 @@
 	transition: transform .25s ease-out;
 }
 
-#article-container a:not(.fancybox):hover, .cmd-text a:hover {
+#article-container a:not(.fancybox):not(.site-page):hover {
 	text-decoration: none;
 	outline: 0;
 	color: #49b1f5;
 }
 
-#article-container a:not(.fancybox):hover:after, .cmd-text a:hover:after {
+#article-container a:not(.fancybox):not(.site-page):hover:after {
 	transform: scaleX(1);
 	transform-origin: bottom left;
 }
@@ -56,6 +56,10 @@
 .heimu:hover {
 	transition: color .13s linear;
     color: white;
+}
+
+#footer-wrap {
+    padding: 1rem;
 }
 
 #footer-wrap a:hover {

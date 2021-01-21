@@ -28,6 +28,38 @@ html, body {
 	font-family: JetBrains Mono, ZCOOL Kuaile;
 }
 
+.cmd-text a {
+	color: #ff7242;
+	text-decoration: none;
+	outline: 0;
+	transition: color .2s ease-out,border .2s ease-out,opacity .2s ease-out;
+	position: relative;
+}
+
+.cmd-text a:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: #49b1f5;
+	transform-origin: bottom right;
+	transition: transform .25s ease-out;
+}
+
+.cmd-text a:hover {
+	text-decoration: none;
+	outline: 0;
+	color: #49b1f5;
+}
+
+.cmd-text a:hover:after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
+
 .waiting {
 	-webkit-animation: twinkling 1s infinite ease-in-out;
 }
@@ -444,4 +476,9 @@ html, body {
         z-index: 1 !important;
 		opacity: 1.0 !important;
     }
+	
+	#footer {
+		padding: 1em 0;
+		background-color: rgba(0,0,0,.7);
+	}
 }
