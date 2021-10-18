@@ -1,0 +1,150 @@
+@font-face {
+	font-family: Matisse EB;
+	src: url(/assets/FOT-MatissePro-EB.otf);
+	font-display: swap;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+	font-family: Matisse EB;
+}
+
+body {
+	background: black;
+}
+
+.warning-line, .aplayer-lrc {
+	height: 50px;
+    width: 100%;
+	background-repeat: repeat-x;
+    background-size: 100px 100%;
+}
+
+.wl-yellow {
+    background-image: linear-gradient(-45deg, yellow 33.3%, transparent 33.3%, transparent 66.6%, yellow 66.6%, yellow);
+}
+
+.wl-red, .aplayer-lrc {
+    background-image: linear-gradient(-45deg, red 33.3%, transparent 33.3%, transparent 66.6%, red 66.6%, red);
+}
+
+.wl-2 {
+	background-position-x: 50px;
+}
+
+@keyframes wl-move {
+	from {background-position-x: 0;}
+	to {background-position-x: 500px;}
+}
+
+@keyframes wl-move-opposite {
+	from {background-position-x: 0;}
+	to {background-position-x: -500px;}
+}
+
+.wl-ani {
+	animation: wl-move 1s infinite cubic-bezier(0.6,-0.7, 0.4, 1.7);
+}
+
+.wl-ani-opp, .aplayer-lrc {
+	animation: wl-move-opposite 1s infinite cubic-bezier(0.6,-0.7, 0.4, 1.7);
+}
+
+.aplayer-lrc {
+	bottom: 0 !important;
+	height: 50px !important;
+}
+
+.hexagon {
+	width: 50px;
+	height: 86.6px;
+	background: red;
+	display: inline-block;
+	position: absolute;
+	color: black;
+	font-size: 20px;
+	text-align: center;
+	margin: 0 25px 0 25px;
+}
+
+.hexagon div {
+    word-break: keep-all;
+    left: -25px;
+    position: relative;
+    width: 100px;
+	display: table;
+}
+
+.hexagon div p {
+	display: table-cell;
+}
+
+.hexagon:before {
+	content: "";
+    width: 0px; 
+	border-bottom: 43.3px solid transparent;
+	border-top: 43.3px solid transparent;
+	border-right: 25px solid red;
+	position: absolute;
+	left: -25px;
+	top: 0px;
+}
+
+.hexagon:after {
+	content: ""; 
+    width: 0px; 
+	border-bottom: 43.3px solid transparent;
+	border-top: 43.3px solid transparent;
+	border-left: 25px solid red;
+	position: absolute;
+	right: -25px;
+	top: 0px;
+	z-index: -1;
+}
+/*
+.hexagon {
+	width: 86.6px;
+	height: 50px;
+	background: red;
+	display: inline-block;
+	position: absolute;
+	color: black;
+	font-size: 20px;
+	text-align: center;
+	line-height: 50px;
+	margin: 25px 0 25px 0;
+}
+
+.hexagon:before {
+	content: "";
+    width: 0px; 
+	border-left: 43.3px solid transparent;
+	border-right: 43.3px solid transparent;
+	border-bottom: 25px solid red;
+	position: absolute;
+	left: 0;
+	top: -25px;
+}
+
+.hexagon:after {
+	content: ""; 
+    width: 0px; 
+	border-left: 43.3px solid transparent;
+	border-right: 43.3px solid transparent;
+	border-top: 25px solid red;
+	position: absolute;
+	left: 0;
+	bottom: -25px;
+}*/
+
+.nerv-red div {
+	background: url(/img/277FEDCC2930193EF823E2442AA28927.webp) no-repeat center;
+	background-size: contain;
+	height: 100%;
+}

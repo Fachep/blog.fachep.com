@@ -1,0 +1,68 @@
+.gray {
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	-moz-filter:grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter:grayscale(100%);
+}
+
+#article-container code, #article-container pre {
+	color: #24292e;
+}
+
+#article-container code {
+	background-color: rgb(27 31 35 / 5%);
+}
+
+#article-container a:not(.fancybox):not(.site-page):not(.flink-list > .flink-list-item a) {
+	color: #ff7242;
+	text-decoration: none;
+	outline: 0;
+	transition: color .2s ease-out,border .2s ease-out,opacity .2s ease-out;
+	position: relative;
+}
+
+#article-container a:not(.fancybox):not(.site-page):not(.flink-list > .flink-list-item a):after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: #49b1f5;
+	transform-origin: bottom right;
+	transition: transform .25s ease-out;
+}
+
+#article-container a:not(.fancybox):not(.site-page):not(.flink-list > .flink-list-item a):hover {
+	text-decoration: none;
+	outline: 0;
+	color: #49b1f5;
+}
+
+#article-container a:not(.fancybox):not(.site-page):not(.flink-list > .flink-list-item a):hover:after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
+
+.heimu {
+	color: #252525;
+    text-shadow: none;
+    background-color: #252525;
+    transition: .37s all linear;
+}
+
+.heimu:hover {
+	transition: color .13s linear;
+    color: white;
+}
+
+#footer-wrap {
+    padding: 1rem;
+}
+
+#footer-wrap a:hover {
+    color: mediumpurple;
+    text-decoration: none;
+}

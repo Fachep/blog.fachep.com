@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Fachep&#39;s Blog</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://blog.fachep.com/"/>
+  <updated>2021-10-14T08:29:21.529Z</updated>
+  <id>https://blog.fachep.com/</id>
+  
+  <author>
+    <name>Fachep Han</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在CSS中实现警戒条效果</title>
+    <link href="https://blog.fachep.com/2021/10/11/css-warning-line/"/>
+    <id>https://blog.fachep.com/2021/10/11/css-warning-line/</id>
+    <published>2021-10-11T14:27:11.000Z</published>
+    <updated>2021-10-14T08:29:21.529Z</updated>
+    
+    <content type="html"><![CDATA[<style>.warning-line {height: 50px;    width: 100%;background-repeat: repeat-x;    background-size: 100px 100%;}.wl-yellow {    background-image: linear-gradient(-45deg, yellow 33.3%, transparent 33.3%, transparent 66.6%, yellow 66.6%, yellow);}.wl-red {    background-image: linear-gradient(-45deg, red 33.3%, transparent 33.3%, transparent 66.6%, red 66.6%, red);}.wl-2 {background-position-x: 50px;}@keyframes wl-move {from {background-position-x: 0;}to {background-position-x: 500px;}}@keyframes wl-move-opposite {from {background-position-x: 0;}to {background-position-x: -500px;}}.wl-ani {animation: wl-move 1s infinite cubic-bezier(0.6,-0.7, 0.4, 1.7);}.wl-ani-opp {animation: wl-move-opposite 1s infinite cubic-bezier(0.6,-0.7, 0.4, 1.7);}</style><div style="background: black"><div class="warning-line wl-red"></div><div class="warning-line wl-yellow wl-2"></div><br><div class="warning-line wl-red wl-ani"></div><br><div class="warning-line wl-red wl-ani-opp"></div></div><br><p>网上找不到纯css实现的效果，自己写了一个，使用时只需要将div加上相应的class即可。</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.warning-line</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">background-repeat</span>: repeat-x;</span><br><span class="line">    <span class="attribute">background-size</span>: <span class="number">100px</span> <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.wl-yellow</span> &#123;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(-<span class="number">45deg</span>, yellow <span class="number">33.3%</span>, transparent <span class="number">33.3%</span>, transparent <span class="number">66.6%</span>, yellow <span class="number">66.6%</span>, yellow);</span><br><span class="line">&#125; <span class="comment">/*黄色*/</span></span><br><span class="line"><span class="selector-class">.wl-red</span> &#123;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(-<span class="number">45deg</span>, red <span class="number">33.3%</span>, transparent <span class="number">33.3%</span>, transparent <span class="number">66.6%</span>, red <span class="number">66.6%</span>, red);</span><br><span class="line">&#125; <span class="comment">/*红色*/</span></span><br><span class="line"></span><br><span class="line"><span class="selector-class">.wl-2</span> &#123;</span><br><span class="line">    <span class="attribute">background-position-x</span>: <span class="number">50px</span>;</span><br><span class="line">&#125; <span class="comment">/*隔行偏移50px*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@keyframes</span> wl-move &#123;</span><br><span class="line">    <span class="selector-tag">from</span> &#123;<span class="attribute">background-position-x</span>: <span class="number">0</span>;&#125;</span><br><span class="line">    <span class="selector-tag">to</span> &#123;<span class="attribute">background-position-x</span>: <span class="number">500px</span>;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.wl-ani</span> &#123;</span><br><span class="line">    <span class="attribute">animation</span>: wl-move <span class="number">1s</span> infinite <span class="built_in">cubic-bezier</span>(<span class="number">0.6</span>,-<span class="number">0.7</span>, <span class="number">0.4</span>, <span class="number">1.7</span>);</span><br><span class="line">&#125; <span class="comment">/*动画*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@keyframes</span> wl-move-opposite &#123;</span><br><span class="line">    <span class="selector-tag">from</span> &#123;<span class="attribute">background-position-x</span>: <span class="number">0</span>;&#125;</span><br><span class="line">    <span class="selector-tag">to</span> &#123;<span class="attribute">background-position-x</span>: -<span class="number">500px</span>;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.wl-ani-opp</span> &#123;</span><br><span class="line">    <span class="attribute">animation</span>: wl-move-opposite <span class="number">1s</span> infinite <span class="built_in">cubic-bezier</span>(<span class="number">0.6</span>,-<span class="number">0.7</span>, <span class="number">0.4</span>, <span class="number">1.7</span>);</span><br><span class="line">&#125; <span class="comment">/*反向动画*/</span></span><br></pre></td></tr></table></figure><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+
+&lt;style&gt;
+.warning-line {
+	height: 50px;
+    width: 100%;
+	background-repeat: repeat-x;
+    background-size: 100px 100%;
+}
+
+.wl-yellow {
+   
+      
+    
+    </summary>
+    
+    
+      <category term="笔记" scheme="https://blog.fachep.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="CSS" scheme="https://blog.fachep.com/tags/CSS/"/>
+    
+      <category term="HTML" scheme="https://blog.fachep.com/tags/HTML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NTFS附加数据流ADS特性实验</title>
+    <link href="https://blog.fachep.com/2021/01/01/ntfs-ads/"/>
+    <id>https://blog.fachep.com/2021/01/01/ntfs-ads/</id>
+    <published>2021-01-01T08:01:28.000Z</published>
+    <updated>2021-01-19T04:21:09.803Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>参考<a href="https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fscc/c54dec26-1551-4d3a-a0ea-4fa40f848eb3">https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fscc/c54dec26-1551-4d3a-a0ea-4fa40f848eb3</a></p></blockquote><div class='spoiler collapsed'>    <div class='spoiler-title'>        翻译    </div>    <div class='spoiler-content'>        <blockquote><p>参考关键词</p><table><thead><tr><th>原文</th><th>译文</th></tr></thead><tbody><tr><td>stream</td><td>流</td></tr><tr><td>main stream</td><td>主流</td></tr><tr><td>stream name</td><td>流名称</td></tr><tr><td>stream type</td><td>流类型</td></tr><tr><td>named stream</td><td>命名流</td></tr><tr><td>Alternate Data Stream(ADS)</td><td>交换数据流</td></tr></tbody></table></blockquote><p><a href="https://docs.microsoft.com/zh-CN/openspecs/windows_protocols/ms-fscc/8ac44452-328c-4d7b-a784-d72afd19bd9f#gt_86f79a17-c0be-4937-8660-0cf6ce5ddc1a">NTFS</a>卷上的所有文件由至少一个<code>流</code>组成，其中<code>主流</code>是一个普通、可查看的文件，也是数据存储的地方。一个数据<code>流</code>的全名遵循下面的格式。</p><p><code>&lt;文件名&gt;:&lt;流名称&gt;:&lt;流类型&gt;</code></p><p>默认<strong>数据</strong>流没有名称，也就是说对于文件<code>sample.txt</code>它的默认流的全名是<code>sample.txt::$DATA</code>，其中<code>sample.txt</code>是文件名，<code>$DATA</code>是<code>流类型</code>。</p><p>用户可以在文件中创建命名流，并以<code>$DATA</code>作为合法名称，意味着这个数据流的全名是<code>sample.txt:$DATA:$DATA</code>。如果用户创建了名为<code>bar</code>的命名流，那么它的全名就是<code>sample.txt:bar:$DATA</code>。任何用于文件名的合法字符都可用于流名称（包括空格）。更多关于流的命名格式的信息，请参考<a href="https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fscc/dc9978d7-6299-4c5a-a22d-a039cdc716ea">[MS-FSCC]</a>。更多关于数据流属性的信息，请参考<a href="https://docs.microsoft.com/zh-CN/openspecs/windows_protocols/ms-fsa/860b1516-c452-47b4-bdbc-625d344e2041">[MS-FSA]</a>。</p><p>对于目录，它们没有默认<strong>数据</strong>流，但是有一个默认<strong>目录</strong>流。目录的流类型是<code>$INDEX_ALLOCATION</code>。<code>$INDEX_ALLOCATION</code>类型流（目录流）的默认流名称是<code>$I30</code>（这一点与<code>$DATA</code>类型流的“空”流名称不同）。下面的操作是等价的：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Dir</span> C:\Users</span><br><span class="line"><span class="built_in">Dir</span> C:\Users:$I30:$INDEX_ALLOCATION</span><br><span class="line"><span class="built_in">Dir</span> C:\Users::$INDEX_ALLOCATION</span><br></pre></td></tr></table></figure><p>虽然目录没有默认<strong>数据</strong>流，它们仍然可以含有命名<strong>数据</strong>流。这些<code>交换数据流</code>通常不可见，但可以被<code>DIR</code>命令的<code>/R</code>选项发现。</p>    </div></div><p>交换数据流（Alternate Data Stream, ADS）是NTFS文件系统特性之一，一个文件可以有多个流，平时读写的是主数据流，其他流其实没太大区别。</p><p>下面通过实验演示：</p><p>假设存在abc文件夹，其下有123.txt和xyz.txt两个空文件</p><p><img src= "/img/loading.gif" data-src="/img/283AFFAB8DD67B151C4AC0CA1C468D4C.webp" alt="image-20210101175516359"></p><p>执行命令</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> abc &gt; <span class="number">123</span>.txt</span><br><span class="line"><span class="built_in">echo</span> def &gt; <span class="number">123</span>.txt:xyz.txt</span><br></pre></td></tr></table></figure><p>用记事本查看两个文件，会发现仅123.txt有数据为abc，</p><p>执行<code>Dir/R</code>可以看到多出来了一个名为<code>123.txt:xyz.txt:$DATA</code>的文件，</p><p><img src= "/img/loading.gif" data-src="/img/400C359DFEDC05582078CDA7FA938E7A.webp" alt="image-20210101175454095"></p><p>此文件用notepad无法直接打开，在命令行执行</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> /p t= &lt; <span class="number">123</span>.txt:xyz.txt</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">%t%</span></span><br><span class="line"><span class="comment">rem 输出def</span></span><br></pre></td></tr></table></figure><p>可得到输出def</p><p><code>123.txt:xyz.txt</code>可作为普通文件读写，在文件管理器中隐藏。</p><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;参考&lt;a href=&quot;https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fscc/c54dec26-1551-4d3a-a0ea-4fa40f848eb3&quot;&gt;https:
+      
+    
+    </summary>
+    
+    
+      <category term="笔记" scheme="https://blog.fachep.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="NTFS" scheme="https://blog.fachep.com/tags/NTFS/"/>
+    
+      <category term="文件流" scheme="https://blog.fachep.com/tags/%E6%96%87%E4%BB%B6%E6%B5%81/"/>
+    
+      <category term="Windows" scheme="https://blog.fachep.com/tags/Windows/"/>
+    
+      <category term="ADS" scheme="https://blog.fachep.com/tags/ADS/"/>
+    
+      <category term="实验" scheme="https://blog.fachep.com/tags/%E5%AE%9E%E9%AA%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Notepad++开启字体连字特性</title>
+    <link href="https://blog.fachep.com/2020/12/29/npp-ligatures-tech/"/>
+    <id>https://blog.fachep.com/2020/12/29/npp-ligatures-tech/</id>
+    <published>2020-12-28T18:37:02.000Z</published>
+    <updated>2021-01-06T08:35:28.835Z</updated>
+    
+    <content type="html"><![CDATA[<p>编码/等宽字体诸如<code>JetBrains Mono</code>支持连字字体，可以将某些特定的相邻合并绘制，</p><p>从而提高可读性和美观度，编辑器<code>Notepad++</code>原生没有此特性的开启设置，</p><p>本文提供**在<code>Notepad++</code>中开启字体连字的方法。</p><ol><li><p>在<strong>插件 &gt; 插件管理</strong>中安装LuaScript插件</p></li><li><p>点击<strong>插件 &gt; LuaScript &gt; Edit Startup Script</strong></p></li><li><p>输入下面代码</p><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">editor.Technology = SC_TECHNOLOGY_DIRECTWRITE</span><br></pre></td></tr></table></figure></li><li><p>保存，重启</p></li></ol><p><code>JetBrains Mono</code>：</p><p>开启前</p><p><img src= "/img/loading.gif" data-src="/img/1936838AAB86F4D4B1A791142D592B8B.webp" alt="开启前"></p><p>开启后</p><p><img src= "/img/loading.gif" data-src="/img/41D768FDC3BA6E4970BA573A13743E90.webp" alt="开启后"></p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-- --- == === != !== =!= =:= =/= &lt;= &gt;= &amp;&amp; &amp;&amp;&amp; &amp;= ++ +++ *** ;; !! ?? ?: ?. ?= &lt;: :&lt; :&gt; &gt;: &lt;&gt; &lt;&lt;&lt; &gt;&gt;&gt; &lt;&lt; &gt;&gt; || -| _|_ |- ||- |= ||= ## ### #### #&#123; #[ ]# #( #? #_ #_( #: #! #= ^= &lt;$&gt; &lt;$ $&gt; &lt;+&gt; &lt;+ +&gt; &lt;*&gt; &lt;* *&gt; &lt;/ &lt;/&gt; /&gt; &lt;!-- &lt;#-- --&gt; -&gt; -&gt;&gt; &lt;&lt;- &lt;- &lt;=&lt; =&lt;&lt; &lt;&lt;= &lt;== &lt;=&gt; &lt;==&gt; ==&gt; =&gt; =&gt;&gt; &gt;=&gt; &gt;&gt;= &gt;&gt;- &gt;- &gt;-- -&lt; -&lt;&lt; &gt;-&gt; &lt;-&lt; &lt;-| &lt;=| |=&gt; |-&gt; &lt;-&gt; &lt;~~ &lt;~ &lt;~&gt; ~~ ~~&gt; ~&gt; ~- -~ ~@ [||] |] [| |&#125; &#123;| [&lt; &gt;] |&gt; &lt;| ||&gt; &lt;|| |||&gt; &lt;||| &lt;|&gt; ... .. .= .- ..&lt; .? :: ::: := ::= :? :?&gt; // /// /* */ /= //= /== @_ __</span><br></pre></td></tr></table></figure><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;编码/等宽字体诸如&lt;code&gt;JetBrains Mono&lt;/code&gt;支持连字字体，可以将某些特定的相邻合并绘制，&lt;/p&gt;
+&lt;p&gt;从而提高可读性和美观度，编辑器&lt;code&gt;Notepad++&lt;/code&gt;原生没有此特性的开启设置，&lt;/p&gt;
+&lt;p&gt;本文提供**在&lt;code&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="笔记" scheme="https://blog.fachep.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="Notepad++" scheme="https://blog.fachep.com/tags/Notepad/"/>
+    
+      <category term="字体" scheme="https://blog.fachep.com/tags/%E5%AD%97%E4%BD%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>串流工具游戏体验简单测评之局域网篇</title>
+    <link href="https://blog.fachep.com/2020/07/29/streaming-tools/"/>
+    <id>https://blog.fachep.com/2020/07/29/streaming-tools/</id>
+    <published>2020-07-29T09:26:00.000Z</published>
+    <updated>2020-12-28T16:37:10.538Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>鉴于大学宿舍可能让带电脑又限制功耗，本人计划将台式机机箱并入物联网实现远程监控/控制，软件层面对不同远程/串流软件进行了简单比较。</p></blockquote><p>本篇主要是局域网内比较，后续会更新公网篇。<br>软件使用</p><table><thead><tr><th>服务端</th><th>客户端</th></tr></thead><tbody><tr><td>RDP w/o RemoteFX</td><td>RDP</td></tr><tr><td>NV GFE GameStream</td><td>Moonlight</td></tr><tr><td>Steam</td><td>Steam</td></tr><tr><td>向日葵</td><td>向日葵绿色版</td></tr><tr><td>向日葵</td><td>向日葵游戏版</td></tr></tbody></table><p><em>Steam开启硬件加速</em><br><em>向日葵画面设置为均衡</em></p><p>目前本人台式机配置如下：</p><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>CPU</td><td>R5 2600</td></tr><tr><td>显卡</td><td>影驰GTX750黑将1G</td></tr><tr><td>内存</td><td>D4 2666 8G*2</td></tr><tr><td>OS</td><td>Win10 Pro 2004</td></tr></tbody></table><p>用来作客户机的笔记本为良心想E420(114191C)，配置如下：</p><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>CPU</td><td>i5 2410M</td></tr><tr><td>核显</td><td>GHD 3000</td></tr><tr><td>集显</td><td>HD6630M 1G</td></tr><tr><td>内存</td><td>D3 1333 2G</td></tr><tr><td>OS</td><td>Win7 Ultimate</td></tr></tbody></table><p>路由器是买SN550送的D191G，有线连接</p><h3 id="首先是喜闻乐见的Master-Lu跑分-按总分降序"><a href="#首先是喜闻乐见的Master-Lu跑分-按总分降序" class="headerlink" title="首先是喜闻乐见的Master Lu跑分(按总分降序)"></a>首先是喜闻乐见的Master Lu跑分(按总分降序)</h3><table><thead><tr><th>环境</th><th>CPU</th><th>GPU</th><th>RAM</th><th>SUM</th></tr></thead><tbody><tr><td>裸机</td><td>119931</td><td>47613</td><td>9954</td><td>177498</td></tr><tr><td>Gameready裸机</td><td>119931</td><td>47512</td><td>9954</td><td>177397</td></tr><tr><td>RDP（关闭windows特效）</td><td>120640</td><td>46865</td><td>9852</td><td>177357</td></tr><tr><td>RDP RemoteFX</td><td>119101</td><td>47331</td><td>9825</td><td>176257</td></tr><tr><td>Steam</td><td>119303</td><td>45519</td><td>9780</td><td>174602</td></tr><tr><td>GFE</td><td>117667</td><td>42583</td><td>9792</td><td>170042</td></tr><tr><td>向日葵软件加速</td><td>96321</td><td>44122</td><td>9714</td><td>150157</td></tr><tr><td>向日葵D3D加速</td><td>93864</td><td>44322</td><td>9708</td><td>147894</td></tr></tbody></table><p><em>由于硬盘无关损伤大未测试</em></p><div class='spoiler collapsed'>    <div class='spoiler-title'>        截图    </div>    <div class='spoiler-content'>        <p><img src= "/img/loading.gif" data-src="/img/E4658E9297BB23A39B1634373CB6C4BC.webp" alt="裸机" title="裸机"><br><em>裸机</em><br><img src= "/img/loading.gif" data-src="/img/425103EFD308C788D4722CBB7B96D6A4.webp" alt="Gameready裸机" title="Gameready裸机"><br><em>Gameready裸机</em><br><img src= "/img/loading.gif" data-src="/img/ACB5CBE7348FC60069D4F17AC8B0DA77.webp" alt="RDP（关闭windows特效）" title="RDP（关闭windows特效）"><br><em>RDP（关闭windows特效）</em><br><img src= "/img/loading.gif" data-src="/img/7C6ADF165AF0641E53C6D5CECFC2AF8D.webp" alt="RDP RemoteFX" title="RDP RemoteFX"><br><em>RDP RemoteFX</em><br><img src= "/img/loading.gif" data-src="/img/156690F4C7574553EED9C31A6E2597A3.webp" alt="Steam" title="Steam"><br><em>Steam</em><br><img src= "/img/loading.gif" data-src="/img/B8627421E5E99161809C44A0AD1850D9.webp" alt="GFE" title="GFE"><br><em>GFE</em><br><img src= "/img/loading.gif" data-src="/img/A4F0DCA8BAFC3C7BDDB29D74D944DBE0.webp" alt="向日葵软件加速" title="向日葵软件加速"><br><em>向日葵软件加速</em><br><img src= "/img/loading.gif" data-src="/img/C64CA11043AB053A9CC0DE97B04F893D.webp" alt="向日葵D3D加速" title="向日葵D3D加速"><br><em>向日葵D3D加速</em></p>    </div></div><h3 id="然后是游戏测试"><a href="#然后是游戏测试" class="headerlink" title="然后是游戏测试"></a>然后是游戏测试</h3><p>由于时间关系使用<code>Minecraft: Java Edition 1.12.2(Optifine)</code>进行测试。<br>游戏使用<code>OpenGL</code>渲染，各软件帧数差距不大；</p><p><strong>GFE</strong>串流游戏方面几乎与本地无异，并且可以简单配置串流桌面；</p><p><strong>Steam</strong>则可以作为A卡玩家的不二之选，不足之处在于软件兼容性差，无法串流桌面，添加游戏麻烦；</p><p><strong>RDP</strong>和<strong>向日葵</strong>（包括游戏版，未测试向日葵UU）通病在于对3D游戏鼠标输入支持差（未验证：可能对D3D游戏有改善）。<br><img src= "/img/loading.gif" data-src="/img/FB06E16575F452FD70F839C424B1AFB8.webp" alt="游戏截图" title="游戏截图"><br><em>使用RDP和向日葵时的游戏截图</em></p><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;鉴于大学宿舍可能让带电脑又限制功耗，本人计划将台式机机箱并入物联网实现远程监控/控制，软件层面对不同远程/串流软件进行了简单比较。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;本篇主要是局域网内比较，后续会更新公网篇。&lt;br&gt;软件使用&lt;/p&gt;
+&lt;ta
+      
+    
+    </summary>
+    
+    
+      <category term="测评" scheme="https://blog.fachep.com/categories/%E6%B5%8B%E8%AF%84/"/>
+    
+    
+      <category term="游戏" scheme="https://blog.fachep.com/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+      <category term="GFE" scheme="https://blog.fachep.com/tags/GFE/"/>
+    
+      <category term="Steam" scheme="https://blog.fachep.com/tags/Steam/"/>
+    
+      <category term="向日葵" scheme="https://blog.fachep.com/tags/%E5%90%91%E6%97%A5%E8%91%B5/"/>
+    
+      <category term="串流" scheme="https://blog.fachep.com/tags/%E4%B8%B2%E6%B5%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>BV号情报</title>
+    <link href="https://blog.fachep.com/2020/03/23/bilibili-bvid/"/>
+    <id>https://blog.fachep.com/2020/03/23/bilibili-bvid/</id>
+    <published>2020-03-23T07:07:40.000Z</published>
+    <updated>2020-12-28T16:36:36.990Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="！！！！！！！！！"><a href="#！！！！！！！！！" class="headerlink" title="！！！！！！！！！"></a>！！！！！！！！！</h2><p>刚才(<code>2020/3/23 14:30:00</code>)，B站官方<a href="//space.bilibili.com/8047632">【哔哩哔哩弹幕网】</a>发布了一篇专栏<a href="//www.bilibili.com/read/cv5167957">《【升级公告】AV号全面升级至BV号》</a>，<br><a href="//space.bilibili.com/8047632"><img src= "/img/loading.gif" data-src="//i0.hdslb.com/bfs/article/c8f598bbcb307fbc828ba9dc959b874a867eeb92.jpg" alt=""></a><br>专栏中表示B站将启用<code>Bv号</code>以取代<code>Av号</code>（具体请看专栏）</p><blockquote><p>更多详细规则说明请见链接FAQ：<a href="https://www.bilibili.com/blackboard/activity-BV-PC.html">https://www.bilibili.com/blackboard/activity-BV-PC.html</a></p></blockquote><hr><p>下面是目前本人掌握的情报：</p><ol><li><code>Av号</code>可以继续使用，未来会被隐藏，但不会取消</li><li><code>Bv号</code>是由<code>Av号</code>使用算法生成，因此有破解的可能</li><li>官方源代码中存在正则表达式<code>/(av[0-9]+)|bv1\w+/</code><del>，这一点可能表示此为bvid v1（后续可能为<code>/(av[0-9]+)|bv[12]\w+/</code>）</del></li><li><code>Bv号</code>可以保护部分隐私，节省服务器开销，为大势所趋</li></ol><hr><p><code>2020/03/24 03:25</code>更新<br>知乎大佬<a href="//www.zhihu.com/people/-._.-">@mcfx</a>于<code>2020-03-23 19:14</code>破解了<code>Bv号</code>算法并发表在<a href="https://www.zhihu.com/question/381784377/answer/1099438784">知乎回答中</a><br><a href="https://www.zhihu.com/question/381784377/answer/1099438784"><img src= "/img/loading.gif" data-src="/img/9C7B92847F8DAEB5DB204921B95EE453.webp" alt=""></a></p><p>本人的移植的转换工具：<br><a href="https://fachep.com/bili-convert.html">https://fachep.com/bili-convert.html</a></p><p>PHP版api使用说明：<br><code>https://fachep.com/api/convert.php</code><br>方法：<code>GET</code></p><p>请求参数说明：</p><table><thead><tr><th>Name</th><th>Type</th><th>Note</th><th>Eg.Value</th></tr></thead><tbody><tr><td><code>avid</code></td><td><code>int</code></td><td><code>Av号</code></td><td><code>170001</code></td></tr><tr><td><code>bvid</code></td><td><code>string</code></td><td><code>Bv号</code></td><td><code>17x411w7KC</code></td></tr><tr><td><code>callback</code></td><td><code>string</code></td><td>Jsonp callback(Optional)</td><td><code>cb</code></td></tr></tbody></table><p>返回参数说明：</p><table><thead><tr><th>Name</th><th>Type</th><th>Note</th><th>Eg.Value</th></tr></thead><tbody><tr><td><code>code</code></td><td><code>int</code></td><td>状态码</td><td><code>200</code></td></tr><tr><td><code>msg</code></td><td><code>string</code></td><td>信息</td><td><code>success</code></td></tr><tr><td><code>avid</code></td><td><code>int</code></td><td><code>Av号</code></td><td><code>170001</code></td></tr><tr><td><code>bvid</code></td><td><code>string</code></td><td><code>Bv号</code></td><td><code>17x411w7KC</code></td></tr></tbody></table><p>请求示例：</p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET https://fachep.com/api/convert.php?avid=170001</span><br></pre></td></tr></table></figure><p>返回示例：</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;code&quot;</span>:<span class="number">200</span>,</span><br><span class="line">    <span class="attr">&quot;msg&quot;</span>:<span class="string">&quot;success&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;avid&quot;</span>:<span class="number">170001</span>,</span><br><span class="line">    <span class="attr">&quot;bvid&quot;</span>:<span class="string">&quot;17x411w7KC&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>状态码：</p><table><thead><tr><th><code>code</code></th><th><code>msg</code></th><th>Note</th></tr></thead><tbody><tr><td><code>200</code></td><td><code>success</code></td><td>成功</td></tr><tr><td><code>-1</code></td><td><code>no parm</code></td><td>无查询参数</td></tr><tr><td><code>-2</code></td><td><code>too much parm</code></td><td>参数过多</td></tr><tr><td><code>-3</code></td><td><code>avid error</code></td><td>Av号格式错误</td></tr><tr><td><code>-3</code></td><td><code>bvid error</code></td><td>Bv号格式错误</td></tr></tbody></table><p><em>以上内容均为本人观点，不代表哔哩哔哩官方立场</em></p><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;！！！！！！！！！&quot;&gt;&lt;a href=&quot;#！！！！！！！！！&quot; class=&quot;headerlink&quot; title=&quot;！！！！！！！！！&quot;&gt;&lt;/a&gt;！！！！！！！！！&lt;/h2&gt;&lt;p&gt;刚才(&lt;code&gt;2020/3/23 14:30:00&lt;/code&gt;)，B站官方&lt;a
+      
+    
+    </summary>
+    
+    
+      <category term="新闻" scheme="https://blog.fachep.com/categories/%E6%96%B0%E9%97%BB/"/>
+    
+    
+      <category term="B站" scheme="https://blog.fachep.com/tags/B%E7%AB%99/"/>
+    
+      <category term="bvid" scheme="https://blog.fachep.com/tags/bvid/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>B站弹幕笔记</title>
+    <link href="https://blog.fachep.com/2020/03/07/Danmaku/"/>
+    <id>https://blog.fachep.com/2020/03/07/Danmaku/</id>
+    <published>2020-03-07T07:46:09.000Z</published>
+    <updated>2021-10-18T08:29:25.839Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="弹幕文件"><a href="#弹幕文件" class="headerlink" title="弹幕文件"></a>弹幕文件</h2><p>弹幕文件可以在</p><ul><li><code>https://api.bilibili.com/x/v1/dm/list.so?oid=&#123;oid/cid&#125;</code></li><li><code>https://comment.bilibili.com/&#123;oid/cid&#125;.xml</code></li><li><code>https://api.bilibili.com/x/v2/dm/history?type=1&amp;oid=&#123;oid/cid&#125;&amp;date=&#123;yyyy-mm-dd&#125;</code></li></ul><p>下载<br> 注：<code>cid</code>可以在<code>https://www.bilibili.com/widget/getPageList?aid=&#123;aid/mid&#125;</code>获取</p><p>弹幕文件格式为<code>xml</code>，结构如下：</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">i</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">chatserver</span>&gt;</span>chat.bilibili.com<span class="tag">&lt;/<span class="name">chatserver</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">chatid</span>&gt;</span>&#123;oid/cid&#125;<span class="tag">&lt;/<span class="name">chatid</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mission</span>&gt;</span>0<span class="tag">&lt;/<span class="name">mission</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">maxlimit</span>&gt;</span>&#123;Max_Limit&#125;<span class="tag">&lt;/<span class="name">maxlimit</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--Max_Limit视视频长短而定 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">state</span>&gt;</span>0<span class="tag">&lt;/<span class="name">state</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">real_name</span>&gt;</span>0<span class="tag">&lt;/<span class="name">real_name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">source</span>&gt;</span>&#123;Status&#125;<span class="tag">&lt;/<span class="name">source</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--历史弹幕中没有source --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--&quot;k-v&quot;或&quot;e-r&quot;，&quot;e-r&quot;表示弹幕过期 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">d</span> <span class="attr">p</span>=<span class="string">&quot;&#123;time&#125;,&#123;type&#125;,&#123;size&#125;,&#123;color&#125;,&#123;timestamp&#125;,&#123;pool&#125;,&#123;uid_crc32&#125;,&#123;row_id&#125;&quot;</span>&gt;</span></span><br><span class="line">        &#123;Text&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">d</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- time为弹幕在视频里的时间 --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- type为弹幕类型 --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- size为字体大小 --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- color为十进制的RGB颜色 --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- timestamp为弹幕发送时间戳 --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- pool为弹幕池 --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- uid_crc32为发送者uid的crc32 --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- row_id用于标记顺序和历史弹幕 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">d</span>&gt;</span>...<span class="tag">&lt;/<span class="name">d</span>&gt;</span></span><br><span class="line">    ...</span><br><span class="line"><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br></pre></td></tr></table></figure><h2 id="弹幕类型"><a href="#弹幕类型" class="headerlink" title="弹幕类型"></a>弹幕类型</h2><p>弹幕类型由<code>type</code>和<code>pool</code>决定<br><code>type</code>取值为[14-79]，<code>pool</code>取值为[0-2]<br>弹幕类型如下：</p><table><thead><tr><th>pool\type</th><th>1</th><th>4</th><th>5</th><th>6</th><th>7</th><th>9</th></tr></thead><tbody><tr><td>0</td><td>滚动弹幕</td><td>底部弹幕</td><td>顶部弹幕</td><td>逆向弹幕</td><td>特殊弹幕(1)</td><td>/</td></tr><tr><td>1</td><td>/</td><td>/</td><td>/</td><td>/</td><td>精确弹幕(2)</td><td>/</td></tr><tr><td>2</td><td>/</td><td>/</td><td>/</td><td>/</td><td>/</td><td>BAS弹幕(3)</td></tr></tbody></table><p>特殊弹幕格式</p><ol><li><code>[&#123;x1(0-1)|(px)&#125;,&#123;y1&#125;,&quot;&#123;Aplha0(0-1)&#125;-&#123;Alpha1&#125;&quot;,&#123;Lifetime&#125;,&quot;&#123;Text&#125;&quot;,&#123;Z_Rotation&#125;,&#123;Y_Rotation&#125;,&#123;x2&#125;,&#123;y2&#125;,&#123;Move_Time(ms)&#125;,&#123;Delay_Time(ms)&#125;,&#123;Outline[01]&#125;,&quot;&#123;Fontname&#125;&quot;,&#123;Linear_Speedup[01]&#125;,[&quot;SVG_Path&quot;]]</code></li><li><code>[&#123;x1(0-1)|(px)&#125;,&#123;y1&#125;,&quot;&#123;Aplha0(0-1)&#125;-&#123;Alpha1&#125;&quot;,&#123;Lifetime&#125;,&quot;&#123;Text&#125;&quot;,&#123;Z_Rotation&#125;,&#123;Y_Rotation&#125;,&#123;x2&#125;,&#123;y2&#125;,&#123;Move_Time(ms)&#125;,&#123;Delay_Time(ms)&#125;,&#123;Outline[01]&#125;,&quot;&#123;Fontname&#125;&quot;,&#123;Linear_Speedup(Bool)&#125;]</code></li><li><a href="https://bilibili.github.io/bas/">B站官方BAS文档</a></li></ol><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;弹幕文件&quot;&gt;&lt;a href=&quot;#弹幕文件&quot; class=&quot;headerlink&quot; title=&quot;弹幕文件&quot;&gt;&lt;/a&gt;弹幕文件&lt;/h2&gt;&lt;p&gt;弹幕文件可以在&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;https://api.bilibili.com/x/v1/dm/li
+      
+    
+    </summary>
+    
+    
+      <category term="笔记" scheme="https://blog.fachep.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="B站" scheme="https://blog.fachep.com/tags/B%E7%AB%99/"/>
+    
+      <category term="弹幕" scheme="https://blog.fachep.com/tags/%E5%BC%B9%E5%B9%95/"/>
+    
+  </entry>
+  
+</feed>
