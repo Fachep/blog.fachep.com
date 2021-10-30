@@ -15,7 +15,7 @@
 }
 
 #article-container a:not(.fancybox):not(.site-page):not(.flink-list > .flink-list-item a) {
-	color: #ff7242;
+	color: #49b1f5;
 	text-decoration: none;
 	outline: 0;
 	transition: color .2s ease-out,border .2s ease-out,opacity .2s ease-out;
@@ -30,7 +30,7 @@
 	height: 2px;
 	bottom: 0;
 	left: 0;
-	background-color: #49b1f5;
+	background-color: #ff7242;
 	transform-origin: bottom right;
 	transition: transform .25s ease-out;
 }
@@ -38,7 +38,7 @@
 #article-container a:not(.fancybox):not(.site-page):not(.flink-list > .flink-list-item a):hover {
 	text-decoration: none;
 	outline: 0;
-	color: #49b1f5;
+	color: #ff7242;
 }
 
 #article-container a:not(.fancybox):not(.site-page):not(.flink-list > .flink-list-item a):hover:after {

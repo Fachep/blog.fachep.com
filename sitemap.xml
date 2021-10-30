@@ -4,71 +4,222 @@
   <url>
     <loc>https://blog.fachep.com/2020/03/07/Danmaku/</loc>
     
-    <lastmod>2021-10-18T08:29:25.839Z</lastmod>
+    <lastmod>2021-10-18</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.fachep.com/2021/10/11/css-warning-line/</loc>
     
-    <lastmod>2021-10-14T08:29:21.529Z</lastmod>
+    <lastmod>2021-10-14</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.fachep.com/2021/01/01/ntfs-ads/</loc>
     
-    <lastmod>2021-01-19T04:21:09.803Z</lastmod>
+    <lastmod>2021-01-19</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.fachep.com/2020/12/29/npp-ligatures-tech/</loc>
     
-    <lastmod>2021-01-06T08:35:28.835Z</lastmod>
+    <lastmod>2021-01-06</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.fachep.com/2020/07/29/streaming-tools/</loc>
     
-    <lastmod>2020-12-28T16:37:10.538Z</lastmod>
+    <lastmod>2020-12-28</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.fachep.com/2020/03/23/bilibili-bvid/</loc>
     
-    <lastmod>2020-12-28T16:36:36.990Z</lastmod>
+    <lastmod>2020-12-28</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.fachep.com/link/index.html</loc>
     
-    <lastmod>2020-07-30T11:14:31.119Z</lastmod>
+    <lastmod>2020-07-30</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.fachep.com/messageboard/index.html</loc>
     
-    <lastmod>2020-07-30T11:13:58.119Z</lastmod>
+    <lastmod>2020-07-30</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.fachep.com/categories/index.html</loc>
     
-    <lastmod>2020-07-30T09:46:12.388Z</lastmod>
+    <lastmod>2020-07-30</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.fachep.com/tags/index.html</loc>
     
-    <lastmod>2020-07-30T09:45:58.835Z</lastmod>
+    <lastmod>2020-07-30</lastmod>
     
+  </url>
+  
+
+  <url>
+    <loc>https://blog.fachep.com/</loc>
+    <lastmod>2021-10-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+  <url>
+    <loc>https://blog.fachep.com/tags/B%E7%AB%99/</loc>
+    <lastmod>2021-10-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.fachep.com/tags/%E5%BC%B9%E5%B9%95/</loc>
+    <lastmod>2021-10-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.fachep.com/tags/bvid/</loc>
+    <lastmod>2021-10-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.fachep.com/tags/Notepad/</loc>
+    <lastmod>2021-10-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.fachep.com/tags/%E5%AD%97%E4%BD%93/</loc>
+    <lastmod>2021-10-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.fachep.com/tags/CSS/</loc>
+    <lastmod>2021-10-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.fachep.com/tags/HTML/</loc>
+    <lastmod>2021-10-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.fachep.com/tags/%E6%B8%B8%E6%88%8F/</loc>
+    <lastmod>2021-10-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.fachep.com/tags/GFE/</loc>
+    <lastmod>2021-10-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.fachep.com/tags/Steam/</loc>
+    <lastmod>2021-10-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.fachep.com/tags/%E5%90%91%E6%97%A5%E8%91%B5/</loc>
+    <lastmod>2021-10-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.fachep.com/tags/%E4%B8%B2%E6%B5%81/</loc>
+    <lastmod>2021-10-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.fachep.com/tags/NTFS/</loc>
+    <lastmod>2021-10-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.fachep.com/tags/%E6%96%87%E4%BB%B6%E6%B5%81/</loc>
+    <lastmod>2021-10-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.fachep.com/tags/Windows/</loc>
+    <lastmod>2021-10-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.fachep.com/tags/ADS/</loc>
+    <lastmod>2021-10-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.fachep.com/tags/%E5%AE%9E%E9%AA%8C/</loc>
+    <lastmod>2021-10-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  
+  <url>
+    <loc>https://blog.fachep.com/categories/%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2021-10-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.fachep.com/categories/%E6%96%B0%E9%97%BB/</loc>
+    <lastmod>2021-10-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.fachep.com/categories/%E6%B5%8B%E8%AF%84/</loc>
+    <lastmod>2021-10-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
   </url>
   
 </urlset>
